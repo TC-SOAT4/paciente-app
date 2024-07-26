@@ -1,24 +1,31 @@
 package com.fiap.paciente.application.paciente.controller;
 
-import com.fiap.paciente.domain.paciente.usecase.IBuscarPacientes;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.tags.Tag;
-import io.swagger.v3.oas.annotations.enums.ParameterIn;
-import io.swagger.v3.oas.annotations.enums.ParameterStyle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.fiap.paciente.domain.paciente.usecase.IBuscarPacientes;
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.enums.ParameterIn;
+import io.swagger.v3.oas.annotations.enums.ParameterStyle;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping("/api/pacientes")
 @Tag(name = "Pacientes")
 public class PacienteController {
+    
     @Autowired
     private IBuscarPacientes buscarPacienteService;
 
-    //@PreAuthorize("hasRole('PACIENTE')")
+    @PreAuthorize("hasRole('PACIENTE') or hasRole('MEDICO')")
     @GetMapping()
     @Operation(
             summary = "Busca por paciente",
