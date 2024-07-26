@@ -1,0 +1,6 @@
+CREATE TABLE Paciente (
+    id UUID PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    cpf VARCHAR(11) NOT NULL,
+    email VARCHAR(50) NOT NULL
+);
