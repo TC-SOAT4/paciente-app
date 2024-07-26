@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: configmap-paciente-app
 data:
-  SPRING_DATASOURCE_URL: jdbc:mariadb://rds-fiap-hackathon.cktpwpbhuxkf.us-east-1.rds.amazonaws.com:3306/pacientedb
+  SPRING_DATASOURCE_URL: jdbc:mariadb://rds-fiap-hackathon-2.cktpwpbhuxkf.us-east-1.rds.amazonaws.com:3306/pacientedb
   SPRING_JPA_SHOW: "true"
   SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL: "true"
