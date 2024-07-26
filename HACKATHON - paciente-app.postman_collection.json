@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "ff2d5b68-c5ac-460b-8fe0-07e6a4f87f8e",
+		"name": "HACKATHON - paciente-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7429173"
+	},
+	"item": [
+		{
+			"name": "/pacientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/paciente-app/api/pacientes?cpf=12312312330&email=daenerys@email.com.br",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paciente-app",
+						"api",
+						"pacientes"
+					],
+					"query": [
+						{
+							"key": "cpf",
+							"value": "12312312330"
+						},
+						{
+							"key": "email",
+							"value": "daenerys@email.com.br"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
