@@ -7,7 +7,7 @@ Microsserviço desenvolvido para cadastro e autenticação de pacientes para o p
 **Tecnologias**: 
  - Projeto em Java 17 
  - Spring-boot 3 Mariadb
- -  Path: /agenda-app
+ -  Path: /paciente-app
 -   Porta: 8080
  
 
