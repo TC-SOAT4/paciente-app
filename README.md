@@ -1,4 +1,4 @@
-**HACKATHON SOAT - Busca-medico-app**
+**HACKATHON SOAT - Paciente-app**
 
 Microsserviço desenvolvido para cadastro e autenticação de pacientes para o projeto **Health&Med** - HACKATHON SOAT 2024.
 
@@ -18,7 +18,7 @@ Microsserviço desenvolvido para cadastro e autenticação de pacientes para o p
 
 - Mariadb 
 ```
-$ docker run --detach --name mariadb-agenda-db -p 3306:3306 --env MARIADB_DATABASE=agendadb --env  MARIADB_USER=mariadb --env MARIADB_PASSWORD=root --env MARIADB_ROOT_PASSWORD=root mariadb:latest
+$ docker run --detach --name mariadb-paciente-db -p 3306:3306 --env MARIADB_DATABASE=pacientedb --env  MARIADB_USER=mariadb --env MARIADB_PASSWORD=root --env MARIADB_ROOT_PASSWORD=root mariadb:latest
 ```
 ---
 
